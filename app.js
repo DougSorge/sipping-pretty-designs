@@ -1,48 +1,48 @@
-//this will be where all of the selecting will be done.
-let imgs = document.getElementsByClassName('img'); //semi misleading, these are divs, but they act as imgs for our purposes
-let modal = document.querySelector('.modal');
-let modalImg = document.querySelector('#modalImg');
-let imgDescrip = document.querySelector('#imgDescription');
+// //this will be where all of the selecting will be done.
+// let imgs = document.getElementsByClassName('img'); //semi misleading, these are divs, but they act as imgs for our purposes
+// let modal = document.querySelector('.modal');
+// let modalImg = document.querySelector('#modalImg');
+// let imgDescrip = document.querySelector('#imgDescription');
 
 
 
-//setting id's for images in the grid in preparatioin to display descriptions.
-for(let i = 0; i < imgs.length; i++){
-  imgs[i].setAttribute('id', (i + 1));
-}
 
-//since the images were tricky and required a workaround to display nicely, finding a way to display them in the modal also required a workaround. 
-//the if statement is another product of the images provided being mismatched jpgs. They look TERRIBLE on small screens I need to find a way to resize them to look good or this is going to be the ongoing soution.
-if(window.innerWidth >= 907){
-  for (let img of imgs) {
-    img.addEventListener('click', (e) => {
-      console.log(e);
-      modal.classList.remove('hide');
-      setSrc(extractUrl(e));
-      imgDescrip.textContent = imageDataBase[e.target.id].description;
-    })
-  }
-} 
+// //setting id's for images in the grid in preparatioin to display descriptions.
+// for(let i = 0; i < imgs.length; i++){
+//   imgs[i].setAttribute('id', (i + 1));
+// }
 
-// Luckily, I was able to extract the file path from the inline styling attribute. I was able to examine to event object, isolate the data we were looking for (which was the background image url) and slice off everything but the file path itself.
-function extractUrl(e) {
-  let newSrc = e.target.attributes.style.nodeValue;
-  let slicedSrc = newSrc.slice(23, -2);
-  return slicedSrc;
-}
+// //since the images were tricky and required a workaround to display nicely, finding a way to display them in the modal also required a workaround. 
+// //the if statement is another product of the images provided being mismatched jpgs. They look TERRIBLE on small screens I need to find a way to resize them to look good or this is going to be the ongoing soution.
+// if(window.innerWidth >= 907){
+//   for (let img of imgs) {
+//     img.addEventListener('click', (e) => {
+//       console.log(e);
+//       modal.classList.remove('hide');
+//       setSrc(extractUrl(e));
+//       imgDescrip.textContent = imageDataBase[e.target.id].description;
+//     })
+//   }
+// } 
 
-// after slicing the correct characters from the inline styling we could insert the target imgs file path into the placeholder img src attribute within the modal.
-function setSrc(newSrc) {
-  modalImg.src = newSrc;
-}
+// // Luckily, I was able to extract the file path from the inline styling attribute. I was able to examine to event object, isolate the data we were looking for (which was the background image url) and slice off everything but the file path itself.
+// function extractUrl(e) {
+//   let newSrc = e.target.attributes.style.nodeValue;
+//   let slicedSrc = newSrc.slice(23, -2);
+//   return slicedSrc;
+// }
+
+// // after slicing the correct characters from the inline styling we could insert the target imgs file path into the placeholder img src attribute within the modal.
+// function setSrc(newSrc) {
+//   modalImg.src = newSrc;
+// }
 
 
 
-// setting eventListener to close the modal on click.
-modal.addEventListener('click', (e)=>{
-  modal.classList.add('hide');
-})
-
+// // setting eventListener to close the modal on click.
+// modal.addEventListener('click', (e)=>{
+//   modal.classList.add('hide');
+// })
 
 
 let imageDataBase = {
@@ -106,4 +106,3 @@ let imageDataBase = {
     description: 'Make sure that the Force is always with you by ordering a set of these Star Wars pint glasses. If you do\'nt see your favorite character just tell me who draw!'
   }  
 }
-

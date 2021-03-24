@@ -5,17 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="I create one-of-a-kind, hand-painted wine glasses, pint glasses and storefront windows.">
-  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:title" content="Sipping Pretty Designs">
+  <meta property="og:image" content="https://scontent.ftpa1-2.fna.fbcdn.net/v/t1.0-9122886929_1787900478039690_2986784166123658878_o.jpg?_nc_cat=102&ccb=3&_nc_sid=e3f864_nc_ohc=vWzbMgLHQYEAX8-kdlN&_nc_ht=scontent.ftpa1-2.fna&oh=aaa8207ae2a861cb6a276b2d61f60d6e&oe=604C26DA">
+  <meta property="og:description" content="Creating handpainted glassware and window art for your event orbusiness!">
+  <meta property="og:url" content="https://sippingprettydesigns.com">
+  <meta name="twitter:card" content="summary_large_image">
+ 
 
-<meta property="og:title" content="Sipping Pretty Designs">
-<meta property="og:image" content="https://scontent.ftpa1-2.fna.fbcdn.net/v/t1.0-9/122886929_1787900478039690_2986784166123658878_o.jpg?_nc_cat=102&ccb=3&_nc_sid=e3f864&_nc_ohc=vWzbMgLHQYEAX8-kdlN&_nc_ht=scontent.ftpa1-2.fna&oh=aaa8207ae2a861cb6a276b2d61f60d6e&oe=604C26DA">
-<meta property="og:description" content="Creating handpainted glassware and window art for your event or business!">
-<meta property="og:url" content="https://sippingprettydesigns.com">
-<meta name="twitter:card" content="summary_large_image">
-
-  
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/style.css">
 
   <script src="https://kit.fontawesome.com/be8f4f996a.js" crossorigin="anonymous"></script>
   <title>Sipping Pretty Designs</title>
@@ -37,20 +40,12 @@
        <a href="https://www.facebook.com/sippingprettydesigns/?ref=page_internal" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
        <a href="https://www.instagram.com/sippingprettydesigns/"  target="_blank"><i class="fab fa-instagram fa-3x"></i></a>
       </div>
-   
-        <!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="shareBar">
-  <a class="a2aBtn a2a_button_facebook"></a>
-  <a class="a2aBtn a2a_button_twitter"></a>
-  <a class="a2aBtn a2a_button_pinterest"></a>
-  </div>
-  <script>
-  var a2a_config = a2a_config || {};
-  a2a_config.num_services = 4;
-  </script>
-  <script async src="https://static.addtoany.com/menu/page.js"></script>
-  <!-- AddToAny END -->
 
+       <div class="a2a_kit a2a_kit_size_32 a2a_default_style" id="shareBar">
+        <a class="a2aBtn a2a_button_facebook"></a>
+        <a class="a2aBtn a2a_button_twitter"></a>
+        <a class="a2aBtn a2a_button_pinterest"></a>
+       </div>
   </header>
 
   <!-- start services section -->
@@ -75,7 +70,7 @@
 
   <!-- start image Gallery -->
   <!-- All pictures were different sizes so I had to apply a background image to each div and size the divs to a happy medium in order for them to fit neatly in a grid. I included a feature to display full image on click to compensate for the cut off images.  -->
-  <section class="site-section" id="gallery">
+  <!-- <section class="site-section" id="gallery">
     
     </div>
     <div class="galleryWrapper">
@@ -106,7 +101,62 @@
     </div>
    
   </section>
-  <!-- end image gallery  -->
+  end image gallery  -->
+
+   <!-- Slider main container -->
+<div class="swiper-container">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img src="images/mainDisplay.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/brideGroom1.jpg" >
+    </div>
+    <div class="swiper-slide">
+      <img src="images/brideGroom2.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/brideGroom3.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/harryPotterCollection.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/thinBlueLine.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/superHeroes.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/keepsakeBox1.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/keepsakeBox2.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/marchingBand.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/mermaidTail.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/puppyLove.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/starWarsColelction.jpg" alt="">
+    </div>
+    <div class="swiper-slide">
+      <img src="images/stPattys.jpg" alt="">
+    </div>
+
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
 
   <!-- start modal -->
  <div class="modal hide">
@@ -149,9 +199,8 @@
       I will reach back to you as soon as I can to discuss your order so that you receive <em>exactly</em> what you are looking for! 
     </p>
 
-    <form
-  action="https://formspree.io/f/mnqoyned" method="POST" enctype="multipartform-data" id="orderForm">  
-  <div>
+    <form action="https://formspree.io/f/mnqoyned" method="POST" enctype="multipartform-data" id="orderForm">  
+  
   <label class="formLabel">
     Name:
     <input type="text" name="name">
@@ -171,7 +220,6 @@
   <!-- your other form fields go here -->
 
   <button type="submit">Request Order</button>
-</div>
 </form>
   </section>
 
@@ -187,6 +235,26 @@
       </p>
     </div>
   </footer>
+  
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<script>var a2a_config = a2a_config || {};
+  a2a_config.num_services = 4;
+  </script>
+
+<!-- swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+  speed: 400,
+  spaceBetween: 100,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
 
 <script src="app.js"></script>
 </body>
